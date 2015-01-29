@@ -4,4 +4,44 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>LongURLPattern</servlet-name>
+  	<display-name>LongURLPattern</display-name>
+  	<description>测试带参数的http请求</description>
+  	<servlet-class>com.lkl.muyi.servlet.LongURLPatternServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ShortURL</servlet-name>
+  	<display-name>ShortURL</display-name>
+  	<description>短的路径匹配</description>
+  	<servlet-class>com.lkl.muyi.servlet.ShortURLPatternServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DefaultServlet</servlet-name>
+  	<display-name>DefaultServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.lkl.muyi.servlet.DefaultServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FullURLPattern</servlet-name>
+  	<display-name>FullURLPattern</display-name>
+  	<description></description>
+  	<servlet-class>com.lkl.muyi.servlet.FullURLPatternServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LongURLPattern</servlet-name>
+  	<url-pattern>/hello/welcome/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShortURL</servlet-name>
+  	<url-pattern>/hello/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DefaultServlet</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FullURLPattern</servlet-name>
+  	<url-pattern>/hello/welcome.html</url-pattern>
+  </servlet-mapping>
 </web-app>
